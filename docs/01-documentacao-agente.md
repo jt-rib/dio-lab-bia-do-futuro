@@ -3,41 +3,36 @@
 ## Caso de Uso
 
 ### Problema
-> Qual problema financeiro seu agente resolve?
-
-[Sua descrição aqui]
+Muitas pessoas têm dificuldade em organizar suas finanças pessoais: não sabem quanto gastam, não conseguem planejar metas de economia e acabam se perdendo em dívidas ou gastos desnecessários.
 
 ### Solução
-> Como o agente resolve esse problema de forma proativa?
-
-[Sua descrição aqui]
+O agente atua como um **consultor financeiro digital**. Ele ajuda o usuário a:
+- Monitorar gastos simulados (dados mockados).  
+- Definir metas de economia.  
+- Receber alertas quando ultrapassa limites pré-definidos.  
+- Obter dicas de planejamento financeiro de forma simples e acessível.  
 
 ### Público-Alvo
-> Quem vai usar esse agente?
-
-[Sua descrição aqui]
+Usuários iniciantes em finanças pessoais, jovens adultos e profissionais que querem organizar melhor seus gastos sem precisar de um consultor humano.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+**BIA (Bot Inteligente de Apoio)**
 
 ### Personalidade
-> Como o agente se comporta? (ex: consultivo, direto, educativo)
-
-[Sua descrição aqui]
+Consultiva, amigável e educativa. Sempre busca simplificar conceitos financeiros e dar exemplos práticos.
 
 ### Tom de Comunicação
-> Formal, informal, técnico, acessível?
-
-[Sua descrição aqui]
+Acessível e direto, sem jargões técnicos.  
+Explica de forma clara, como se fosse uma conversa com um amigo que entende de finanças.
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: "Olá! Vamos organizar suas finanças hoje?"  
+- Confirmação: "Entendi, você gastou R$200 em lazer este mês. Vou registrar isso."  
+- Erro/Limitação: "Não tenho essa informação no momento, mas posso te ajudar a simular com dados fictícios."  
 
 ---
 
@@ -47,35 +42,9 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
+    A[Usuário] -->|Mensagem| B[Interface Streamlit]
+    B --> C[LLM via Ollama]
+    C --> D[Base de Conhecimento Mockada]
     D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
-```
-
-### Componentes
-
-| Componente | Descrição |
-|------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
-
----
-
-## Segurança e Anti-Alucinação
-
-### Estratégias Adotadas
-
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
-
-### Limitações Declaradas
-> O que o agente NÃO faz?
-
-[Liste aqui as limitações explícitas do agente]
+    C --> E[Validação de Segurança]
+    E --> F[Resposta ao Usuário]
