@@ -70,8 +70,9 @@ Este projeto é um fork e não representa um produto final.
 Ele foi desenvolvido com fins educacionais e demonstrativos, utilizando dados fictícios para simulação.
 
 📽 Pitch
-O pitch de 3 minutos está descrito em docs/05-pitch.md.
-Após gravar o vídeo (via YouTube, Loom ou Google Drive), cole o link no documento.
+Este repositório contém a apresentação da BIA (Bot Inteligente de Apoio).
+📄 [Clique aqui para ver a apresentação](docs/apresentacao_bia.pdf)
+
 
 ✨ Conclusão
 O projeto mostra como construir um agente financeiro digital passo a passo:
